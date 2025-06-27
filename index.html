@@ -52,14 +52,14 @@
     .services li {
       margin-bottom: 1rem;
     }
-    .contact-form input, .contact-form textarea {
+    form input, form textarea, form select {
       width: 100%;
       padding: 0.75rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-    .contact-form button {
+    form button {
       background: #111;
       color: white;
       border: none;
@@ -85,6 +85,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#booking">Book</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -103,9 +104,27 @@
     </ul>
   </section>
 
+  <section id="booking">
+    <h2>Book a Service</h2>
+    <form action="https://example.com/booking" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <select name="service" required>
+        <option value="">Select a Service</option>
+        <option>Basic Wash</option>
+        <option>Interior Detail</option>
+        <option>Full Detail</option>
+        <option>Paint Protection</option>
+      </select>
+      <textarea name="message" rows="5" placeholder="Additional Notes (Optional)"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
   <section id="contact">
-    <h2>Book or Contact Us</h2>
-    <form class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea rows="5" placeholder="Your Message"></textarea>
